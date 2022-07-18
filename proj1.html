@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>SEE THE CLOCK</title>
+
+      <style>
+            #clc {
+                  background-color: yellow;
+            }
+      </style>
+</head>
+
+<body>
+
+      <div id="clc" style="text-align: center">
+            <h1>The time is </h1>
+            <br>
+            <h3 id="hrs"></h3>
+            <h1>Done by chera &#128540</h1>
+      </div>
+      <script>
+            var hrr;
+            var a,b;
+            function fun() {
+                  hrr =new Date()
+                   a = hrr.getHours() + " :" + hrr.getMinutes()+" :"+hrr.getSeconds();
+                   b = hrr.getDate() + "/" + hrr.getMonth()+"/"+hrr.getFullYear();
+                  document.getElementById("hrs").innerHTML=a+ " at "+ b;
+            }
+            setInterval(fun, 1000);
+      </script>
+</body>
+
+</html>
